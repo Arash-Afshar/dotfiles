@@ -1,0 +1,46 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Arash Afshar
+	email = arash.afshar.edu@gmail.com
+
+[ui "color"]
+	ui = always
+[color]
+	ui = true
+[core]
+	autocrlf = input
+	safecrlf = true
+[merge]
+	tool = nvim -d
+[alias]
+	c = commit
+	s = status
+	st = status
+	lg = log --oneline
+	last = log -1 HEAD
+	cl = log -p -- ':(exclude)Cargo.lock'
+	f = push --force-with-lease
+	# https://stackoverflow.com/a/11688523/472927
+	ss = "!f() { git stash show stash^{/$*} -p; }; f"
+	sa = "!f() { git stash apply stash^{/$*}; }; f"
+	sl = stash list
+[pull]
+	ff = only
+[push]
+	default = simple
+[help]
+	autocorrect = 1
+[github]
+	user = Arash-Afshar
+[diff]
+	algorithm = patience
+	compactionHeuristic = true
+#[commit]
+#	gpgsign = true
+[protocol]
+	version = 2
+#[sendemail]
+#	smtpserver = /usr/bin/msmtp
+#	annotate = yes
+#[diff "odf"]
+#	textconv = odt2txt
