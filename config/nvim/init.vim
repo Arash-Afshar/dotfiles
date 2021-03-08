@@ -51,8 +51,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
+Plug 'dense-analysis/ale'
 Plug 'rhysd/vim-clang-format'
 Plug 'fatih/vim-go'
+
 " Javascript
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'

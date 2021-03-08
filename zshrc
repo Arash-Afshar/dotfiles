@@ -21,6 +21,10 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 setxkbmap dvorak -option ctrl:nocaps
 source "$HOME/.cargo/env"
 
+# Enable fzf key bindings
+source ~/.zsh_functions/completion.zsh
+source ~/.zsh_functions/key-bindings.zsh
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -37,3 +41,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PATH=$PATH:/home/aafshar/.local/bin
+export PATH=$PATH:$(go env GOPATH)/bin
+# alias run_tensorflow='docker run -u $(id -u):$(id -g) --rm --network=host --gpus all -it -p 8888:8888 -v $PWD:/tf -w /tf  tensorflow/tensorflow:nightly-gpu-jupyter bash # export PATH=$PATH:/.local/bin &&  pip install jupyter -U && pip install jupyterlab && jupyter lab --ip=0.0.0.0 --port=9999 --allow-root'
+alias run_tensorflow='docker run -u $(id -u):$(id -g) --rm --network=host --gpus all -it -p 8888:8888 -v $PWD:/tf -w /tf  custom-stable-tensorflow'
+alias n='/usr/bin/nvim.appimage'
